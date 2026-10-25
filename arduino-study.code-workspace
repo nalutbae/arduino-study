@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "projects/01-blinky"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.pio": true,
+      "**/.piolibdeps": true,
+      "**/.vscode": true
+    },
+    "search.exclude": {
+      "**/.pio": true,
+      "**/lib/*/": false
+    },
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11"
+  },
+  "extensions": {
+    "recommendations": [
+      "platformio.platformio-ide"
+    ]
+  }
+}
