@@ -4,7 +4,7 @@
 .piolibdeps/
 
 # VSCode
-.vscode/*
+.vscode
 !.vscode/extensions.json
 !.vscode/settings.json
 
