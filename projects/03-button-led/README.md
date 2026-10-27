@@ -83,7 +83,7 @@ platformio run -e uno --target upload
 
 ## 동작 영상
 
-![버튼 LED 동작](prj-03-result.mov)
+<video src="prj-03-result.MOV" controls width="80%"></video>
 
 > 영상에서 버튼을 누르고 뗄을 때 LED가 켜지고 꺼지는 것을 확인할 수 있습니다.
 

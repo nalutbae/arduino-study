@@ -67,7 +67,7 @@ LED가 켜지지 않을 경우 다리 방향을 확인하세요. 긴 다리(+)�
 
 ## 동작 영상
 
-![LED 깜빡임 동작](prj-02-result.MOV)
+<video src="prj-02-result.MOV" controls width="80%"></video>
 
 > 영상에서 외부 LED가 0.5초 간격으로 깜빡이는 것을 확인할 수 있습니다.
 
