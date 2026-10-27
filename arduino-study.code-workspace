@@ -2,6 +2,9 @@
   "folders": [
     {
       "path": "projects/01-blinky"
+    },
+    {
+      "path": "projects/03-button-led"
     }
   ],
   "settings": {

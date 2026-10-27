@@ -6,7 +6,9 @@
 #   ./scripts/new-project.sh 03-my-project          # 보드 대화형 선택
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# arduino-study 루트 디렉토리 (스크립트가 위치한 디렉토리의 상위)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 PROJECTS_DIR="$ROOT/projects"
 WORKSPACE="$ROOT/arduino-study.code-workspace"
 
@@ -154,7 +156,16 @@ EOF
 echo "✓ 생성: $TARGET"
 
 # ── workspace에 등록 ──
-python3 - "$WORKSPACE" "$NAME" <<'PYEOF'
+# python3가 실제 실행되면 사용, 아니면 python
+if python3 --version &>/dev/null; then
+  PY="python3"
+else
+  PY="python"
+fi
+# Git Bash 경로(/c/)를 Windows 경로(C:/)로 변환
+WS_PATH=${WORKSPACE/\/c\//C:\/}
+WS_PATH=${WS_PATH//\//\\}
+"$PY" - "$WS_PATH" "$NAME" <<'PYEOF'
 import json, sys, os
 
 ws_path, name = sys.argv[1], sys.argv[2]
